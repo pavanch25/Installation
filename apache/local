@@ -1,13 +1,17 @@
-connect to the machine and open the terminal
+#connect to the machine and open the terminal
 
-$ sudo su - #for switch to root user
+#for switch to root user
+$ sudo su - 
 
-$ sudo yum install -y #for updating the package
+#for updating the package
+$ sudo yum install -y 
 
-$ sudo yum insstall httpd #installing apache package
+#installing apache package
+$ sudo yum insstall httpd 
 
 After the installation start the apache service
-$ sudo systemctl start httpd #for starting the service
+#for starting the service
+$ sudo systemctl start httpd 
 
 create a index.html file and put it in /var/www/html
 $ vim /var/www/html/index.html
