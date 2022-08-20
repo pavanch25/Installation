@@ -13,6 +13,9 @@ After the installation start the apache service
 #for starting the service
 $ sudo systemctl start httpd 
 
+#for whenever system gets restarted it will automatically start the service.
+$ sudo systemctl start httpd 
+
 create a index.html file and put it in /var/www/html
 $ vim /var/www/html/index.html
 
