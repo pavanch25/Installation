@@ -1,16 +1,16 @@
 connect to the machine and open the terminal
 
-sudo su - #for switch to root user
+$ sudo su - #for switch to root user
 
-sudo yum install -y #for updating the package
+$ sudo yum install -y #for updating the package
 
-sudo yum insstall httpd #installing apache package
+$ sudo yum insstall httpd #installing apache package
 
 After the installation start the apache service
-sudo systemctl start httpd #for starting the service
+$ sudo systemctl start httpd #for starting the service
 
 create a index.html file and put it in /var/www/html
-vim /var/www/html/index.html
+$ vim /var/www/html/index.html
 
 <html>
 <body>
@@ -21,7 +21,7 @@ vim /var/www/html/index.html
 Now save and exit
 
 Then restart the apache service
-systemctl restart httpd
+$ systemctl restart httpd
 
 Then open the browser and type below URL
 http://localhost:8080
