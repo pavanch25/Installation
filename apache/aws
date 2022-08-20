@@ -1,0 +1,41 @@
+#connect to the machine and open the terminal
+
+#for switch to root user
+$ sudo su - 
+
+#for updating the package
+$ sudo yum install -y 
+
+#installing apache package
+$ sudo yum insstall httpd 
+
+After the installation start the apache service
+#for starting the service
+$ sudo systemctl start httpd 
+
+#for whenever system gets restarted it will automatically start the service.
+$ sudo systemctl start httpd 
+
+create a index.html file and put it in /var/www/html
+$ vim /var/www/html/index.html
+
+<html>
+<body>
+<h1> Hello World </h1>
+<body>
+</html>
+
+Now save and exit
+
+Then restart the apache service
+$ systemctl restart httpd
+
+Go to the security group section and open the port number 80 with ipv4 anywhere (0.0.0.0/0).
+Then go to the browser and type below url
+http://pucblic_ip_of_instance/
+
+
+
+
+
+
