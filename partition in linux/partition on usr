@@ -1,0 +1,55 @@
+-----------------------Mount new partition on /usr location-------------------- 
+Connect to the terminal
+
+Create a new volume 
+
+Attached new volume to the machine
+
+$ lsblk 
+
+$ fdisk /dev/xvdf    #creating a partition
+
+press 'n' for creating partition 
+
+Select primary partition and provide details - partition number, first sector and last sector
+
+press 'p' for list down the partition list.
+
+Then type 'exit' and enter
+
+$ mkdir /tmp/usr/    #create a temporary directory
+
+$ mkfs.ext4 /dev/xvdf   #format the partition
+
+$ mount /dev/xvdf /tmp/usr/   #mount 
+
+$ rsync -avz /usr/ /tmp/usr/    #copy the content of /usr/ to /tmp/usr/
+
+
+Check the size of the both directory
+$ du -sh /usr/       #check the size of the directory
+
+$ du -sh /tmp/usr/    #check the size of the directory
+
+
+
+
+Now permanent mount the new partition
+$ blkid /dev/xvdf   #to get the UUID
+
+$ vim /etc/fstab     #edit the fstab file 
+
+Make the following entry in the fstab file
+'UUID=30b761ef-35d5-409d-966e-d8d21cfed784       /usr    ext4    defaults        0       0'
+
+$ reboot                #reboot the server
+
+The new partition will be mounted on /usr location
+
+
+
+
+
+
+
+
