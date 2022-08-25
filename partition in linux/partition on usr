@@ -44,6 +44,9 @@ Make the following entry in the fstab file
 
 $ reboot                #reboot the server
 
+
+$ rm -rvf /tmp/usr      #remove temp folder
+
 The new partition will be mounted on /usr location
 
 
